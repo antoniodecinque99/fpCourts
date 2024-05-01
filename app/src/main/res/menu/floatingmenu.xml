@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/gal"
+        android:title="Select image from gallery" />
+    <item
+        android:id="@+id/cam"
+        android:title="Use camera" />
+
+</menu>

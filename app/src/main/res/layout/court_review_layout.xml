@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="20dp"
+    android:backgroundTint="@color/white"
+    android:elevation="3dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/reviewerImage"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/user_pic_2"
+        app:layout_constraintBottom_toBottomOf="@+id/reviewerNickname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/reviewerName" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reviewerNickname"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/reviewStar5"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/reviewStar4"
+            app:layout_constraintStart_toEndOf="@+id/reviewStar4"
+            app:layout_constraintTop_toTopOf="@+id/reviewStar4"
+            app:srcCompat="@drawable/baseline_star_empty_24" />
+
+        <ImageView
+            android:id="@+id/reviewStar4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/reviewStar3"
+            app:layout_constraintEnd_toStartOf="@+id/reviewStar5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/reviewStar3"
+            app:layout_constraintTop_toTopOf="@+id/reviewStar3"
+            app:srcCompat="@drawable/baseline_star_empty_24" />
+
+        <ImageView
+            android:id="@+id/reviewStar1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="2dp"
+            app:layout_constraintEnd_toStartOf="@+id/reviewStar2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_star_empty_24" />
+
+        <ImageView
+            android:id="@+id/reviewStar2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/reviewStar1"
+            app:layout_constraintEnd_toStartOf="@+id/reviewStar3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/reviewStar1"
+            app:layout_constraintTop_toTopOf="@+id/reviewStar1"
+            app:srcCompat="@drawable/baseline_star_empty_24" />
+
+        <ImageView
+            android:id="@+id/reviewStar3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:padding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/reviewStar2"
+            app:layout_constraintEnd_toStartOf="@+id/reviewStar4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/reviewStar2"
+            app:layout_constraintTop_toTopOf="@+id/reviewStar2"
+            app:srcCompat="@drawable/baseline_star_empty_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/reviewText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_rounded_medium"
+        android:text="Review Text"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visitedOnDate" />
+
+    <TextView
+        android:id="@+id/reviewRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_rounded_bold"
+        android:paddingHorizontal="10dp"
+        android:text="5.0"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toStartOf="@+id/reviewDate"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/reviewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/sf_pro_rounded_medium"
+        android:text="3 days ago"
+        android:layout_marginStart="10dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/visitedOnDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Court not visited"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        android:fontFamily="@font/sf_pro_rounded_medium"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/reviewerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/sf_pro_display_semibold"
+        android:maxLines="1"
+        android:text="Antonio De Cinque"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/reviewerImage"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reviewerNickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:maxLines="1"
+        android:text="Antonio De Cinque"
+        android:textSize="12sp"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/reviewerImage"
+        app:layout_constraintTop_toBottomOf="@+id/reviewerName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

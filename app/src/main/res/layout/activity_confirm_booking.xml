@@ -1,0 +1,1087 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ResDetailsAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/ActivityTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:text="Confirm Booking"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="15dp"
+                android:background="@color/white"
+                android:contentDescription="Back"
+                android:src="@drawable/baseline_arrow_back_24"
+                app:tint="@color/red" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fadeScrollbars="true"
+        android:fadingEdge="vertical"
+        android:fadingEdgeLength="8dp"
+        android:requiresFadingEdge="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ResDetailsAppBarLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="96dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/courtImage"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:adjustViewBounds="false"
+                android:background="#035700"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize3Percent"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/courtImageGradient"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="false"
+                android:background="#00000000"
+                android:scaleType="centerCrop"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginTop="150dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize3Percent"
+                app:srcCompat="@drawable/gradient"
+                tools:srcCompat="@drawable/gradient" />
+
+            <TextView
+                android:id="@+id/courtName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="-10dp"
+                android:alpha="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:maxLines="2"
+                android:text="Court Name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/courtAddress"
+                app:layout_constraintEnd_toEndOf="@+id/courtImage"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/courtImage" />
+
+            <TextView
+                android:id="@+id/courtAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="8dp"
+                android:alpha="1"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_semibold"
+                android:maxLines="1"
+                android:text="Court Address"
+                android:textColor="#CEFFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/courtImage"
+                app:layout_constraintEnd_toEndOf="@+id/courtImage"
+                app:layout_constraintStart_toStartOf="@+id/courtImage" />
+
+            <ImageView
+                android:id="@+id/white"
+                android:layout_width="52dp"
+                android:layout_height="47dp"
+                android:paddingTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/courtImage"
+                app:layout_constraintTop_toBottomOf="@+id/additionalRequests"
+                app:srcCompat="@drawable/white"
+                android:layout_marginStart="-10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/WhiteTeamText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sf_pro_rounded_bold"
+                android:text="White Team"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/white"
+                app:layout_constraintStart_toEndOf="@+id/white" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfileWhite"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/user_pic_2"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/WhiteTeamText"
+                app:layout_constraintStart_toStartOf="@+id/WhiteTeamText"
+                app:layout_constraintTop_toBottomOf="@+id/WhiteTeamText" />
+
+            <Button
+                android:id="@+id/white_add_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:text="+"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/userProfileWhite"
+                app:layout_constraintStart_toStartOf="@+id/userProfileWhite"
+                app:layout_constraintTop_toBottomOf="@+id/userProfileWhite" />
+
+            <ImageView
+                android:id="@+id/black"
+                android:layout_width="52dp"
+                android:layout_height="47dp"
+                android:paddingTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/white"
+                app:layout_constraintTop_toBottomOf="@+id/vsText"
+                app:srcCompat="@drawable/black" />
+
+            <Button
+                android:id="@+id/black_add_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:text="+"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/userProfileBlack"
+                app:layout_constraintStart_toStartOf="@+id/userProfileBlack"
+                app:layout_constraintTop_toBottomOf="@+id/userProfileBlack" />
+
+
+            <TextView
+                android:id="@+id/BlackTeamText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/sf_pro_rounded_bold"
+                android:text="Black Team"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/black"
+                app:layout_constraintStart_toEndOf="@+id/black" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfileBlack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/user_pic_2"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/BlackTeamText"
+                app:layout_constraintStart_toStartOf="@+id/BlackTeamText"
+                app:layout_constraintTop_toBottomOf="@+id/BlackTeamText" />
+
+
+            <TextView
+                android:id="@+id/bookingDeteilsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:text="Booking details"
+                android:textColor="@color/red"
+                android:textSize="24sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTeamsButton" />
+
+            <TextView
+                android:id="@+id/reservationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/sf_pro_rounded_bold"
+                android:paddingStart="16dp"
+                android:text="Thursday April 27th, 2023"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courtImage" />
+
+            <TextView
+                android:id="@+id/timeslot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_rounded_medium"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:text="10:00 - 11:30"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reservationDate" />
+
+
+            <TextView
+                android:id="@+id/sportName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/rounded_box"
+                android:fontFamily="@font/sf_pro_rounded_medium"
+                android:paddingHorizontal="7dp"
+                android:text="Football"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/courtImage"
+                app:layout_constraintTop_toTopOf="@+id/courtImage" />
+
+            <TextView
+                android:id="@+id/priceTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/sf_pro_rounded_bold"
+                android:paddingStart="16dp"
+                android:text="Price to pay:"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timeslot" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_rounded_medium"
+                android:paddingStart="10dp"
+                android:text="10.0 $"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/priceTitle"
+                app:layout_constraintTop_toTopOf="@+id/priceTitle" />
+
+            <EditText
+                android:id="@+id/additionalRequests"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/sf_pro_rounded_medium"
+                android:hint="e.g.: Water bottle, extra racquets..."
+                android:paddingStart="8dp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/additionalRequestsTitle" />
+
+            <TextView
+                android:id="@+id/additionalRequestsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_rounded_bold"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:text="Additional Requests"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/priceTitle" />
+
+            <TextView
+                android:id="@+id/info_regole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:drawableEnd="@drawable/baseline_keyboard_arrow_up_24"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_rounded_bold"
+                android:maxLines="10"
+                android:text="General rules"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/info_regole_expanded"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bookingDeteilsText" />
+
+            <TextView
+                android:id="@+id/info_regole_expanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_rounded_medium"
+                android:maxLines="10"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/info_note"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/info_regole" />
+
+            <TextView
+                android:id="@+id/info_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+
+                android:drawableEnd="@drawable/baseline_keyboard_arrow_up_24"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:maxLines="10"
+                android:text="Organizer's notes"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@id/info_note_expanded"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/info_regole_expanded" />
+
+            <TextView
+                android:id="@+id/info_note_expanded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="end"
+                android:maxLines="10"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:fontFamily="@font/sf_pro_rounded_medium"
+                app:layout_constraintBottom_toTopOf="@id/confirmBookingButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/info_note" />
+
+            <Button
+                android:id="@+id/confirmBookingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/green"
+                android:drawableLeft="@drawable/done_fill0_wght400_grad0_opsz32"
+                android:drawableTint="@color/white"
+                android:elevation="10dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/sf_pro_rounded_medium"
+                android:foregroundTint="@color/white"
+
+                android:text="@string/confirm_booking_button_text"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/info_note_expanded"
+                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+            <ImageView
+                android:id="@+id/sportIcon"
+                android:layout_width="96dp"
+                android:layout_height="64dp"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bookingDeteilsText"
+                app:srcCompat="@drawable/football_icon"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Search your friends by nickname"
+                android:paddingStart="16dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/searcButton"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="233dp" />
+
+            <Button
+                android:id="@+id/searcButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/editTextSearch"
+                tools:layout_editor_absoluteY="233dp" />
+
+
+            <TextView
+                android:id="@+id/blackTeamText6"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:maxLines="2"
+                android:text="Friend Name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/blackTeamImage6"
+                app:layout_constraintStart_toStartOf="@+id/blackTeamImage6"
+                app:layout_constraintTop_toBottomOf="@+id/blackTeamImage6" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/blackTeamDelete6"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+                android:tint="@color/red"
+                app:backgroundTint="@color/grey_background"
+                app:fabCustomSize="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/blackTeamImage6"
+                app:layout_constraintTop_toTopOf="@+id/blackTeamImage6"
+                app:srcCompat="@drawable/close_fill0_wght400_grad0_opsz20" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/blackTeamImage6"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="black team image 6"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/light_grey"
+                app:layout_constraintStart_toEndOf="@+id/blackTeamImage5"
+                app:layout_constraintTop_toTopOf="@+id/blackTeamImage5"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/empty_friend_icon_48" />
+
+            <TextView
+                android:id="@+id/blackTeamText5"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:maxLines="2"
+                android:text="Friend Name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/blackTeamImage5"
+                app:layout_constraintStart_toStartOf="@+id/blackTeamImage5"
+                app:layout_constraintTop_toBottomOf="@+id/blackTeamImage5" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/blackTeamDelete5"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+                android:tint="@color/red"
+                app:backgroundTint="@color/grey_background"
+                app:fabCustomSize="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/blackTeamImage5"
+                app:layout_constraintTop_toTopOf="@+id/blackTeamImage5"
+                app:srcCompat="@drawable/close_fill0_wght400_grad0_opsz20" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/blackTeamImage5"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="black team image 5"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/light_grey"
+                app:layout_constraintStart_toEndOf="@+id/blackTeamImage4"
+                app:layout_constraintTop_toTopOf="@+id/blackTeamImage4"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/empty_friend_icon_48" />
+
+            <TextView
+                android:id="@+id/blackTeamText4"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:maxLines="2"
+                android:text="Friend Name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/blackTeamImage4"
+                app:layout_constraintStart_toStartOf="@+id/blackTeamImage4"
+                app:layout_constraintTop_toBottomOf="@+id/blackTeamImage4" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/blackTeamDelete4"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+                android:tint="@color/red"
+                app:backgroundTint="@color/grey_background"
+                app:fabCustomSize="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/blackTeamImage4"
+                app:layout_constraintTop_toTopOf="@+id/blackTeamImage4"
+                app:srcCompat="@drawable/close_fill0_wght400_grad0_opsz20" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/blackTeamImage4"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="black team image 4"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/light_grey"
+                app:layout_constraintStart_toEndOf="@+id/blackTeamImage3"
+                app:layout_constraintTop_toTopOf="@+id/blackTeamImage3"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/empty_friend_icon_48" />
+
+            <TextView
+                android:id="@+id/blackTeamText3"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:maxLines="2"
+                android:text="Friend Name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/blackTeamImage3"
+                app:layout_constraintStart_toStartOf="@+id/blackTeamImage3"
+                app:layout_constraintTop_toBottomOf="@+id/blackTeamImage3" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/blackTeamDelete3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+                android:tint="@color/red"
+                app:backgroundTint="@color/grey_background"
+                app:fabCustomSize="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/blackTeamImage3"
+                app:layout_constraintTop_toTopOf="@+id/blackTeamImage3"
+                app:srcCompat="@drawable/close_fill0_wght400_grad0_opsz20" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/blackTeamImage3"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="black team image 3"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/light_grey"
+                app:layout_constraintStart_toEndOf="@+id/blackTeamImage2"
+                app:layout_constraintTop_toTopOf="@+id/blackTeamImage2"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/empty_friend_icon_48" />
+
+            <TextView
+                android:id="@+id/blackTeamText2"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:maxLines="2"
+                android:text="Friend Name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/blackTeamImage2"
+                app:layout_constraintStart_toStartOf="@+id/blackTeamImage2"
+                app:layout_constraintTop_toBottomOf="@+id/blackTeamImage2" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/blackTeamDelete2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+                android:tint="@color/red"
+                app:backgroundTint="@color/grey_background"
+                app:fabCustomSize="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/blackTeamImage2"
+                app:layout_constraintTop_toTopOf="@+id/blackTeamImage2"
+                app:srcCompat="@drawable/close_fill0_wght400_grad0_opsz20" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/blackTeamImage2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="black team image 2"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/light_grey"
+                app:layout_constraintStart_toEndOf="@+id/blackTeamImage1"
+                app:layout_constraintTop_toTopOf="@+id/blackTeamImage1"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/empty_friend_icon_48" />
+
+            <TextView
+                android:id="@+id/blackTeamText1"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:maxLines="2"
+                android:text="Add Friend"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/blackTeamImage1"
+                app:layout_constraintStart_toStartOf="@+id/blackTeamImage1"
+                app:layout_constraintTop_toBottomOf="@+id/blackTeamImage1" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/blackTeamDelete1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+                android:tint="@color/red"
+                app:backgroundTint="@color/grey_background"
+                app:fabCustomSize="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/blackTeamImage1"
+                app:layout_constraintTop_toTopOf="@+id/blackTeamImage1"
+                app:srcCompat="@drawable/close_fill0_wght400_grad0_opsz20" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/blackTeamImage1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="black team image 1"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/blue"
+                app:layout_constraintStart_toStartOf="@+id/black"
+                app:layout_constraintTop_toBottomOf="@+id/black"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/add_friend_icon_48" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/blackTeamSwapOverlay"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/roundimagebutton"
+                android:backgroundTint="#74000000"
+                android:contentDescription="black team swap overlay"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/white"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/black"
+                app:layout_constraintTop_toBottomOf="@+id/black"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/swap_small" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/whiteTeamDelete6"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+                android:tint="@color/red"
+                app:backgroundTint="@color/grey_background"
+                app:fabCustomSize="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/whiteTeamImage6"
+                app:layout_constraintTop_toTopOf="@+id/whiteTeamImage6"
+                app:srcCompat="@drawable/close_fill0_wght400_grad0_opsz20" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/whiteTeamImage6"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="white team image 6"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/light_grey"
+                app:layout_constraintStart_toEndOf="@+id/whiteTeamImage5"
+                app:layout_constraintTop_toTopOf="@+id/whiteTeamImage5"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/empty_friend_icon_48" />
+
+            <TextView
+                android:id="@+id/whiteTeamText6"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:maxLines="2"
+                android:text="Friend Name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/whiteTeamImage6"
+                app:layout_constraintStart_toStartOf="@+id/whiteTeamImage6"
+                app:layout_constraintTop_toBottomOf="@+id/whiteTeamImage6" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/whiteTeamDelete5"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+                android:tint="@color/red"
+                app:backgroundTint="@color/grey_background"
+                app:fabCustomSize="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/whiteTeamImage5"
+                app:layout_constraintTop_toTopOf="@+id/whiteTeamImage5"
+                app:srcCompat="@drawable/close_fill0_wght400_grad0_opsz20" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/whiteTeamImage5"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="white team image 5"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/light_grey"
+                app:layout_constraintStart_toEndOf="@+id/whiteTeamImage4"
+                app:layout_constraintTop_toTopOf="@+id/whiteTeamImage4"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/empty_friend_icon_48" />
+
+            <TextView
+                android:id="@+id/whiteTeamText5"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:maxLines="2"
+                android:text="Friend Name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/whiteTeamImage5"
+                app:layout_constraintStart_toStartOf="@+id/whiteTeamImage5"
+                app:layout_constraintTop_toBottomOf="@+id/whiteTeamImage5" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/whiteTeamDelete4"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+                android:tint="@color/red"
+                app:backgroundTint="@color/grey_background"
+                app:fabCustomSize="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/whiteTeamImage4"
+                app:layout_constraintTop_toTopOf="@+id/whiteTeamImage4"
+                app:srcCompat="@drawable/close_fill0_wght400_grad0_opsz20" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/whiteTeamImage4"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="white team image 4"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/light_grey"
+                app:layout_constraintStart_toEndOf="@+id/whiteTeamImage3"
+                app:layout_constraintTop_toTopOf="@+id/whiteTeamImage3"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/empty_friend_icon_48" />
+
+            <TextView
+                android:id="@+id/whiteTeamText4"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:maxLines="2"
+                android:text="Friend Name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/whiteTeamImage4"
+                app:layout_constraintStart_toStartOf="@+id/whiteTeamImage4"
+                app:layout_constraintTop_toBottomOf="@+id/whiteTeamImage4" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/whiteTeamDelete3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+                android:tint="@color/red"
+                app:backgroundTint="@color/grey_background"
+                app:fabCustomSize="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/whiteTeamImage3"
+                app:layout_constraintTop_toTopOf="@+id/whiteTeamImage3"
+                app:srcCompat="@drawable/close_fill0_wght400_grad0_opsz20" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/whiteTeamImage3"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="white team image 3"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/light_grey"
+                app:layout_constraintStart_toEndOf="@+id/whiteTeamImage2"
+                app:layout_constraintTop_toTopOf="@+id/whiteTeamImage2"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/empty_friend_icon_48" />
+
+            <TextView
+                android:id="@+id/whiteTeamText3"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:maxLines="2"
+                android:text="Friend Name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/whiteTeamImage3"
+                app:layout_constraintStart_toStartOf="@+id/whiteTeamImage3"
+                app:layout_constraintTop_toBottomOf="@+id/whiteTeamImage3" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/whiteTeamDelete2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+                android:tint="@color/red"
+                app:backgroundTint="@color/grey_background"
+                app:fabCustomSize="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/whiteTeamImage2"
+                app:layout_constraintTop_toTopOf="@+id/whiteTeamImage2"
+                app:srcCompat="@drawable/close_fill0_wght400_grad0_opsz20" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/whiteTeamImage2"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="white team image 2"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/blue"
+                app:layout_constraintStart_toEndOf="@+id/whiteTeamImage1"
+                app:layout_constraintTop_toTopOf="@+id/whiteTeamImage1"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/add_friend_icon_48" />
+
+            <TextView
+                android:id="@+id/whiteTeamText2"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:maxLines="2"
+                android:text="Add Friend"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/whiteTeamImage2"
+                app:layout_constraintStart_toStartOf="@+id/whiteTeamImage2"
+                app:layout_constraintTop_toBottomOf="@+id/whiteTeamImage2" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/whiteTeamDelete1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="false"
+                android:clickable="true"
+                android:tint="@color/red"
+                app:backgroundTint="@color/grey_background"
+                app:fabCustomSize="24dp"
+                app:layout_constraintEnd_toEndOf="@+id/whiteTeamImage1"
+                app:layout_constraintTop_toTopOf="@+id/whiteTeamImage1"
+                app:srcCompat="@drawable/close_fill0_wght400_grad0_opsz20" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/whiteTeamImage1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="white team image 1"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="@+id/white"
+                app:layout_constraintTop_toBottomOf="@+id/white"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/user_pic_round" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/whiteTeamSwapOverlay"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/roundimagebutton"
+                android:backgroundTint="#74000000"
+                android:contentDescription="black team swap overlay"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:tint="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/white"
+                app:layout_constraintTop_toBottomOf="@+id/white"
+                app:shapeAppearanceOverlay="@style/Circular"
+                app:srcCompat="@drawable/swap_small" />
+
+            <TextView
+                android:id="@+id/whiteTeamText1"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:maxLines="2"
+                android:text="You"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/whiteTeamImage1"
+                app:layout_constraintStart_toStartOf="@+id/whiteTeamImage1"
+                app:layout_constraintTop_toBottomOf="@+id/whiteTeamImage1" />
+
+            <TextView
+                android:id="@+id/vsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/sf_pro_rounded_medium"
+                android:text="VS."
+                android:textColor="@color/red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/whiteTeamText1" />
+
+            <View
+                android:id="@+id/vsDividerLeft"
+                android:layout_width="160dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/vsText"
+                app:layout_constraintEnd_toStartOf="@+id/vsText"
+                app:layout_constraintTop_toTopOf="@+id/vsText" />
+
+            <View
+                android:id="@+id/vsDividerRight"
+                android:layout_width="160dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintBottom_toBottomOf="@+id/vsText"
+                app:layout_constraintStart_toEndOf="@+id/vsText"
+                app:layout_constraintTop_toTopOf="@+id/vsText" />
+
+            <Button
+                android:id="@+id/editTeamsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/rounded_button"
+                android:drawableLeft="@drawable/swap_horiz_fill0_wght400_grad0_opsz24"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/sf_pro_rounded_bold"
+                android:paddingHorizontal="12dp"
+                android:textSize="18sp"
+                android:text="Swap teams"
+                android:textAllCaps="false"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/blackTeamText1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/searchPlayersFragmentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="96dp"
+        android:elevation="10dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_search_players"
+        tools:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MyProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:progressTint">@color/red</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize5Percent" parent="">
+        <item name="cornerSize">5%</item>
+    </style>
+    <style name="Circular" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize2Percent" parent="">
+        <item name="cornerSize">2%</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize3Percent" parent="">
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="Statistic_value">
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="profile_tab">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/rounded_box</item>
+    </style>
+
+    <style name="tab_title">
+        <item name="android:textColor">#2196F3</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="follower_pic">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:background">#ffffff</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="BottomNavigationViewTextStyle">
+        <item name="fontFamily">@font/sf_pro_rounded_medium</item>
+    </style>
+
+    <style name="MySeekBar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:progressBackgroundTint">#f4511e</item>
+        <item name="android:progressTint">@color/progress_red</item>
+        <item name="android:thumbTint">@color/red</item>
+    </style>
+
+
+</resources>

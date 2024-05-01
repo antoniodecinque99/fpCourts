@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">fpCourts</string>
+    <string-array name="Sports">
+        <item>FOOTBALL</item>
+        <item>VOLLEY</item>
+        <item>BASKET</item>
+        <item>TENNIS</item>
+        <item>PADEL</item>
+    </string-array>
+
+    <string name="month_year">%1s %2s</string>
+    <string name="previous_month">Previous Month</string>
+    <string name="next_month">Next Month</string>
+
+    <string name="edit_name">Edit Profile</string>
+    <string name="edit_profile_button">Edit profile</string>
+    <string name="name">Simone</string>
+    <string name="surname">Paniati</string>
+    <string name="nickname">\@sp23</string>
+    <string name="age">23</string>
+    <string name="location">Turin</string>
+    <string name="description">User description</string>
+    <string name="level">66</string>
+    <string name="nickname_hint">Nickname</string>
+
+    <string name="statistics_played">6</string>
+    <string name="statistics_won">5</string>
+    <string name="statistics_lost">1</string>
+    <string name="statistics_met">41</string>
+    <string name="statistics_organized">6</string>
+    <string name="statistics_planned">2</string>
+    <string name="deleteSportButtonContentDescription">Delete this sport for your sports.</string>
+
+    <string name="server_client_id">339101457429-skiu9ls05aouvudh50904npmnftr98d7.apps.googleusercontent.com</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="back">Back</string>
+    <string name="campo_placeholder">Campo XYZ</string>
+    <string name="address_placeholder">Corso Duca degli Abruzzi 24, Torino TO 10143</string>
+    <string name="date_and_time_title">Date and Time</string>
+    <string name="date_placeholder">Thursday April 27th, 2023</string>
+    <string name="timeslot_placeholder">10:00 - 11:30</string>
+    <string name="court_image_content_descroption">Court Image</string>
+    <string name="sport_name_placeholder">Football</string>
+    <string name="additional_requests_hint">e.g.: Extra racquets, a water bottle, towels...</string>
+    <string name="additional_requests_title">Additional Requests</string>
+    <string name="confirm_booking_button_text">Confirm Booking</string>
+    <string name="price_title">Price paid</string>
+    <string name="price_placeholder">10,50 €</string>
+    <string name="camera_button_content_desc">Take or choose picture</string>
+    <string name="back_to_my_profile">Back to My Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save">Save</string>
+    <string name="my_information">MY INFORMATION</string>
+    <string name="name_title">Name</string>
+    <string name="surname_title">Surname</string>
+    <string name="nickname_title">Nickname</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="dob_placeholder">23-06-1999</string>
+    <string name="location_title">Location</string>
+    <string name="description_title">Description</string>
+    <string name="my_sports_title">MY SPORTS</string>
+    <string name="add_sport_text">Add Sport</string>
+    <string name="booking_leave_a_review">Review the experience</string>
+
+    <string name="full_text_regole">Show up at the camp at least 15 minutes in advance.\n\nIf you are not present you will be notified and you will have severe limitations on the future use of this service.</string>
+    <string name="full_text_note">You will be able to unsubscribe by 12:00 of the following day.\n\nYou can then request a replacement but if you cannot find a replacement you will have to present to the camp.</string>
+
+
+    <string name="first_slide_title">Welcome to fpCourts!</string>
+    <string name="first_slide_desc">Discover and book your favorite courts and fields for your favorite sports. Manage your reservations and connect with fellow sports enthusiasts. Get started now!</string>
+
+    <string name="second_slide_title">Find and Reserve</string>
+    <string name="second_slide_desc">Easily search for available courts or fields based on location, sport, or date and time. Get real-time availability and pricing information at your fingertips.</string>
+
+    <string name="third_slide_title">Connect and Play</string>
+    <string name="third_slide_desc">Connect with like-minded individuals, find teammates to play with, and accept or reject invitations. Rate and review courts or fields based on your experiences. Enjoy the best sports facilities!</string>
+
+</resources>

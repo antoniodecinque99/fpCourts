@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_profile"
+        android:enabled="true"
+        android:icon="@drawable/baseline_person_pin_24"
+        android:title="Profile"
+        />
+    <item
+        android:id="@+id/page_showBooking"
+        android:enabled="true"
+        android:icon="@drawable/baseline_calendar_month_24"
+        android:title="My Bookings" />
+    <item
+        android:id="@+id/page_courtsList"
+        android:enabled="true"
+        android:icon="@drawable/baseline_star_rate_24"
+        android:title="Courts"/>
+
+    <item
+        android:id="@+id/page_Inbox"
+        android:enabled="true"
+        android:icon="@drawable/invite_icon"
+        android:title="Inbox"/>
+</menu>

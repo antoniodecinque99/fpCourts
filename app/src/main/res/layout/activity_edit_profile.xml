@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.example.mainactivity.activities.ShowProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize">
+
+            <ImageButton
+                android:id="@+id/editProfileBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginEnd="15dp"
+                android:background="@color/white"
+                android:contentDescription="@string/back_to_my_profile"
+                android:src="@drawable/baseline_arrow_back_24"
+                app:tint="@color/red"
+                tools:ignore="TouchTargetSizeCheck" />
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rounded_button_red"
+                android:drawableStart="@drawable/baseline_save_24"
+                android:fontFamily="@font/sf_pro_rounded_medium"
+                android:drawableTint="@color/red"
+                android:paddingHorizontal="20dp"
+                android:text="  Save"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/editProfileTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:text="@string/edit_profile"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:elevation="3dp"
+        android:paddingHorizontal="16dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+
+            android:src="@drawable/user_pic_2"
+            app:civ_border_color="@color/red"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/cameraPortraitView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:srcCompat="@drawable/baseline_camera_alt_24" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="2"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingBottom="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:fadingEdgeLength="8dp"
+                android:requiresFadingEdge="vertical"
+                android:background="@drawable/swipe_up_card">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/profile_tab"
+                        android:layout_height="match_parent"
+                        android:elevation="3dp"
+                        android:layout_marginTop="16dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/informations"
+                            style="@style/tab_title"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/sf_pro_rounded_medium"
+                            android:text="@string/my_information"
+                            android:textSize="18sp" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="16dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="16dp">
+
+                            <TextView
+                                android:id="@+id/name1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/sf_pro_rounded_regular"
+                                android:text="@string/name_title"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <EditText
+                                android:id="@+id/edit_name"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_semibold"
+                                android:hint="@string/name_title"
+                                android:importantForAutofill="no"
+                                android:inputType="textCapWords|textPersonName"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:background="@drawable/rounded_textbox"
+                                android:paddingHorizontal="10dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/name1"
+                                app:layout_constraintTop_toBottomOf="@+id/name1"
+                                tools:ignore="LabelFor" />
+
+                            <TextView
+                                android:id="@+id/nickname1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/sf_pro_rounded_regular"
+                                android:text="@string/nickname_title"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/edit_name" />
+
+                            <EditText
+                                android:id="@+id/edit_nickname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_semibold"
+                                android:hint="@string/nickname_hint"
+                                android:background="@drawable/rounded_textbox"
+                                android:paddingHorizontal="10dp"
+                                android:importantForAutofill="no"
+                                android:inputType="text"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/nickname1"
+                                app:layout_constraintTop_toBottomOf="@+id/nickname1"
+                                tools:ignore="LabelFor" />
+
+
+                            <TextView
+                                android:id="@+id/age1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/sf_pro_rounded_regular"
+                                android:text="@string/date_of_birth"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="@+id/location1"
+                                app:layout_constraintTop_toBottomOf="@+id/edit_location" />
+
+                            <Button
+                                android:id="@+id/edit_age"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/rounded_textbox"
+                                android:drawableStart="@drawable/baseline_calendar_month_24"
+                                android:drawablePadding="8dp"
+                                android:drawableTint="@color/grey"
+                                android:fontFamily="@font/sf_pro_display_semibold"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp"
+                                android:text="@string/dob_placeholder"
+                                android:textColor="@color/grey"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textAllCaps="false"
+                                app:layout_constraintStart_toStartOf="@+id/age1"
+                                app:layout_constraintTop_toBottomOf="@+id/age1" />
+
+                            <TextView
+                                android:id="@+id/location1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/sf_pro_rounded_regular"
+                                android:text="@string/location_title"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="@+id/nickname1"
+                                app:layout_constraintTop_toBottomOf="@+id/edit_nickname" />
+
+                            <EditText
+                                android:id="@+id/edit_location"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_semibold"
+                                android:hint="Location"
+                                android:importantForAutofill="no"
+                                android:inputType="text"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/black"
+                                android:background="@drawable/rounded_textbox"
+                                android:paddingHorizontal="10dp"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/location1"
+                                app:layout_constraintTop_toBottomOf="@+id/location1"
+                                tools:ignore="LabelFor" />
+
+                            <TextView
+                                android:id="@+id/descript1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/sf_pro_rounded_regular"
+                                android:text="@string/description_title"
+                                android:textSize="20sp"
+                                app:layout_constraintStart_toStartOf="@+id/age1"
+                                app:layout_constraintTop_toBottomOf="@+id/edit_age" />
+
+                            <EditText
+                                android:id="@+id/edit_description"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:hint="A brief description about yourself."
+                                android:background="@drawable/rounded_textbox"
+                                android:inputType="textMultiLine"
+                                android:paddingHorizontal="10dp"
+                                android:importantForAutofill="no"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="@+id/descript1"
+                                app:layout_constraintTop_toBottomOf="@+id/descript1"
+                                tools:ignore="LabelFor" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/profile_tab"
+                        android:layout_height="match_parent"
+                        android:elevation="3dp">
+
+                        <TextView
+                            android:id="@+id/mySportsEdit"
+                            style="@style/tab_title"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/sf_pro_rounded_medium"
+                            android:text="@string/my_sports_title"
+                            android:textSize="18sp" />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/mySportsEditRecyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingTop="2dp">
+
+                            <Button
+                                android:id="@+id/addSportButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_marginVertical="8dp"
+                                android:background="@drawable/rounded_button"
+                                android:backgroundTint="@color/blue"
+                                android:paddingHorizontal="20dp"
+                                android:text="@string/add_sport_text"
+                                android:textSize="18sp"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:visibility="gone"
+        android:id="@+id/bottomNavigation3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_background"
+        app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyle"
+        app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:itemTextColor="@drawable/item_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_navigation" />
+
+</LinearLayout>

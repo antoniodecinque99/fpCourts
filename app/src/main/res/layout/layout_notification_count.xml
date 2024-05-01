@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/notification_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:text="5"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/sf_pro_rounded_bold"
+        android:textAlignment="center"
+        android:layout_marginEnd="28dp"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:background="@drawable/rounded_textbox"
+        android:backgroundTint="@color/red"
+        android:elevation="8dp" />
+
+</FrameLayout>

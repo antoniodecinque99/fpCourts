@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp">
+
+        <ImageView
+            android:id="@+id/mySportsSportIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/mySportsSportName"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/basket_icon" />
+
+
+        <TextView
+            android:id="@+id/mySportsSportName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_rounded_medium"
+            android:maxLines="1"
+            android:paddingHorizontal="10dp"
+            android:text="Basketball"
+            android:layout_marginTop="5dp"
+            android:textAlignment="textStart"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mySportsSportIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/mySportsLevelNumber"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_rounded_bold"
+            android:text="4"
+            android:textAlignment="center"
+            android:textColor="@color/red"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mySportsSportName"
+            app:layout_constraintEnd_toStartOf="@+id/deleteSportButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/editSportSeekBar"
+            app:layout_constraintTop_toTopOf="@+id/mySportsSportName"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/mySportsLevelDescription"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_rounded_bold"
+            android:text="SEMI-PRO"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editSportSeekBar"
+            app:layout_constraintEnd_toEndOf="@+id/mySportsLevelNumber"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/mySportsLevelNumber"
+            app:layout_constraintTop_toBottomOf="@+id/mySportsSportName" />
+
+        <SeekBar
+            android:id="@+id/editSportSeekBar"
+            style="@style/MySeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_marginBottom="10dp"
+            android:indeterminateTint="@color/red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mySportsSportIcon"
+            app:layout_constraintTop_toTopOf="@+id/mySportsSportName" />
+
+        <TextView
+            android:id="@+id/chooseLevelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_rounded_medium"
+            android:text="MY LEVEL"
+            android:visibility="gone"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/mySportsSportName"
+            app:layout_constraintEnd_toEndOf="@+id/editSportSeekBar"
+            app:layout_constraintStart_toStartOf="@+id/editSportSeekBar" />
+
+        <ImageButton
+            android:id="@+id/deleteSportButton"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:backgroundTint="#00FFFFFF"
+            android:contentDescription="@string/deleteSportButtonContentDescription"
+            android:scaleType="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/delete_fill0_wght400_grad0_opsz24" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.68" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

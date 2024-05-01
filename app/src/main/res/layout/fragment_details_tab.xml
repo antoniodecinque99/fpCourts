@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/dateTimeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_rounded_bold"
+        android:paddingStart="16dp"
+        android:text="Date and Time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reservationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_rounded_medium"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:text="Thursday April 27th, 2023"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTimeTitle" />
+
+    <TextView
+        android:id="@+id/timeslot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_rounded_medium"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:text="10:00 - 11:30"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reservationDate" />
+
+
+    <ImageView
+        android:id="@+id/sportIcon"
+        android:layout_width="96dp"
+        android:layout_height="64dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/football_icon" />
+
+
+    <TextView
+        android:id="@+id/sportName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_box"
+        android:fontFamily="@font/sf_pro_rounded_medium"
+        android:paddingHorizontal="7dp"
+        android:text="Football"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/sportIcon"
+        app:layout_constraintStart_toStartOf="@+id/sportIcon"
+        app:layout_constraintTop_toBottomOf="@+id/sportIcon" />
+
+    <TextView
+        android:id="@+id/priceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_rounded_bold"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:text="Price paid"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeslot" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sf_pro_rounded_medium"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:text="10,50 €"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/priceTitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

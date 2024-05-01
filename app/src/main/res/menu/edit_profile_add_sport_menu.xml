@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add_sport_basket"
+        android:title="Basketball"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/add_sport_football"
+        android:title="Football"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/add_sport_tennis"
+        android:title="Tennis"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/add_sport_volley"
+        android:title="Volleyball"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/add_sport_padel"
+        android:title="Padel"
+        app:showAsAction="never"/>
+</menu>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#323232</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="yellow">#FFFFC107</color>
+    <color name="blue">#0095FF</color>
+    <color name="tonal_blue">#4DDEFF</color>
+    <color name="red">#E32625</color>
+    <color name="progress_red">#FC3A19</color>
+    <color name="grey">#4F5153</color>
+    <color name="light_grey">#D1D1D6</color>
+    <color name="grey_background">#F5F5F5</color>
+    <color name="lavander">#8692f7</color>
+
+    <color name="basket_color">#FF7700</color>
+    <color name="football_color">#322C2C</color>
+    <color name="tennis_color">#008000</color>
+    <color name="volley_color">#1E90FF</color>
+    <color name="padel_color">#FF1493</color>
+
+    <color name="calendar_toolbar">#64B5F6</color>
+    <color name="text_color">#FF000000</color>
+    <color name="outline">#64B5F6</color>
+    <color name="status_bar">#3194E6</color>
+    <color name="card_view">#EAE9E9</color>
+    <color name="green">#1e824c</color>
+
+    <color name="button_green">#1e824c</color>
+    <color name="light_green">#AAFFAE</color>
+    <color name="unseen_notification">#FFE4CE</color>
+
+</resources>
