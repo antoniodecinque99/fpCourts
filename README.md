@@ -71,12 +71,12 @@ Below are screenshots of the available courts and the review system:
 
 #### 📲 Available Courts Interface:
 - **Filter by Sport**: Users can easily filter courts by sport type using a drop-down menu.
-- **Court Listings**: Each listing displays an image, sport icon, address, and star rating to quickly convey essential information.
+- **Court Listings**: Each listing displays an image, sport icon, address, and star rating.
 - **Interactive Details**: Information buttons provide access to further details and booking options.
 
 #### ⭐ Court Reviews Interface:
 - **Review Details**: Users can read and edit reviews, with each entry showing the reviewer's name, profile picture, rating, and review date.
-- **Review Management**: An "Edit review" button allows users to update their reviews, enhancing the interactive experience.
+- **Review Management**: An "Edit review" button allows users to update their reviews.
 
 ### 📩 Inbox Interface Overview
 
